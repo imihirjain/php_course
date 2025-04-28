@@ -1,6 +1,6 @@
-<?php
-echo "This is the demo of multidimensional array just as building 1-101, 1-102, 2-201, 2-202, 3-301, 3-302 and so on...in simple terms multiple array in single array </br>";
 
+
+<?php
 $users = [
     [1, "Mihir", "Delhi", "abc@test.com"],
     [2, "Rajneesh", "Haryana", "def@test.com"],
@@ -8,14 +8,25 @@ $users = [
     [4, "Sumit", "Orrisa", "xyz@test.com"],
 ];
 
-// echo "<pre>";
-// print_r($users);
-// echo "</pre>";
+echo "<table border='2'>";
 
-// using loop;
+echo "<tr>
+<th>S.no</th>
+<th>Name</th>
+<th>State</th>
+<th>Email</th>
+</tr>";
+
 for ($i = 0; $i < count($users); $i++) {
+    echo "<tr>";
     for ($j = 0; $j < count($users[$i]); $j++) {
+        echo "<td>";
         echo $users[$i][$j];
         echo "</br>";
+        echo "</td>";
     }
+    echo "</tr>";
 }
+
+echo "</table>";
+?> 
